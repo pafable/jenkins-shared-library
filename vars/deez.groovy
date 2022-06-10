@@ -1,5 +1,5 @@
 import com.phil.jenkins.lib.PipelineMessages
 
-def deezNuts() {
+def call() {
     return PipelineMessages.DN
 }
