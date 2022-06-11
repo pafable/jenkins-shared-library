@@ -19,7 +19,10 @@ def call(final Closure body) {
 
         stages {
             stage ('this is a test 1') {
-                println deez()
+                steps {
+                    println deez()
+
+                }
             }
         }
     }
