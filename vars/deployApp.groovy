@@ -26,7 +26,7 @@ def call(final Closure body) {
                 steps {
                     println PipelineMessages.DN
                     println x
-                    pwd()
+                    println pwd()
                 }
             }
         }
