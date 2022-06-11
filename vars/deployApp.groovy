@@ -1,6 +1,10 @@
 import com.phil.jenkins.lib.PipelineMessages
 
 def call(final Closure body) {
+    body.resolveStrategy = Closure.DELEGATE_FIRST
+
+    def x = pwd()
+
     pipeline {
         agent any
 
@@ -21,6 +25,7 @@ def call(final Closure body) {
             stage ('this is a test 1') {
                 steps {
                     println PipelineMessages.DN
+                    println x
 
                 }
             }
