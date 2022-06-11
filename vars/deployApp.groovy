@@ -3,7 +3,7 @@ import com.phil.jenkins.lib.PipelineMessages
 def call(final Closure body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
 
-    def x = pwd()
+    def x = System.getProperty("user.dir")
 
     pipeline {
         agent any
