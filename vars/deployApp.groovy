@@ -29,7 +29,6 @@ def call(final Closure body) {
                     println "This is pwd(): ${pwd()}"
                     println "This is workspace: ${WORKSPACE}"
 
-
                     sh """
                         echo 'pet=dog' >> pet.txt
                         echo 'age=1' >> pet.txt
@@ -39,6 +38,13 @@ def call(final Closure body) {
                         pwd
                         cat pet.txt
                     """
+                }
+            }
+
+            stage ('this is test 2') {
+                println "Workspace is: ${WORKSPACE}"
+                steps {
+                    cat pet.txt
                 }
             }
         }
