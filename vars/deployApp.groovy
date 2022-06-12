@@ -30,14 +30,25 @@ def call(final Closure body) {
                     println "This is workspace: ${WORKSPACE}"
 
                     sh """
-                        echo 'pet=dog' >> pet.txt
-                        echo 'age=1' >> pet.txt
-                        echo 'legCount=4' >> pet.txt
-                        echo 'waggingTail=yes' >> pet.txt
-                        
-                        pwd
-                        cat pet.txt
+                        echo 'SAMPLE KEY PAIRS'
+                        echo 'PET=dog' >> pet.txt
+                        echo 'AGE=1' >> pet.txt
+                        echo 'LEGCOUNT=4' >> pet.txt
+                        echo 'WAGGINGTAIL=yes' >> pet.txt
                     """
+
+                    /*
+                        Inject entries in pet.txt as environment variables
+                    */
+                    sh """
+                        for n in \$(cat pet.txt)
+                        do
+                            export \${n}
+                        done
+                    """
+
+                    println "PET: \${PET}"
+                    println "Pet env.pet: ${env.PET}"
                 }
             }
 
