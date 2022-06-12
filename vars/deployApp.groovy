@@ -41,14 +41,14 @@ def call(final Closure body) {
                 }
             }
 
-            stage ('this is test 2') {
-                steps {
-                    println "Workspace is: ${WORKSPACE}"
-                    steps {
-                        cat pet.txt
-                    }
-                }
-            }
+//            stage ('this is test 2') {
+//                steps {
+//                    println "Workspace is: ${WORKSPACE}"
+//                    steps {
+//                        cat pet.txt
+//                    }
+//                }
+//            }
         }
     }
 }
