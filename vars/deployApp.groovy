@@ -28,7 +28,7 @@ def call(final Closure body) {
                     println "This is x: ${x}"
                     println "This is pwd(): ${pwd()}"
 
-                    String y = WORKSPACE
+                    def y = WORKSPACE
                     println "This is workspace: ${y}"
 
                     sh """
