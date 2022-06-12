@@ -4,6 +4,7 @@ def call(final Closure body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
 
     final String x = System.getProperty("user.dir")
+    final String y = WORKSPACE
 
     pipeline {
         agent any
