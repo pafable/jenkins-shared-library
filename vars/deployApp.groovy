@@ -4,7 +4,6 @@ def call(final Closure body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
 
     final String x = System.getProperty("user.dir")
-    final String y = WORKSPACE
 
     pipeline {
         agent any
@@ -28,11 +27,18 @@ def call(final Closure body) {
                     println PipelineMessages.DN
                     println "This is x: ${x}"
                     println "This is pwd(): ${pwd()}"
-                    println "This is workspace: ${WORKSPACE}"
-                    println y
+
+                    String y = WORKSPACE
+                    println "This is workspace: ${y}"
 
                     sh """
+                        echo 'pet=dog' >> pet.txt
+                        echo 'age=1' >> pet.txt
+                        echo 'legCount=4' >> pet.txt
+                        echo 'waggingTail=yes' >> pet.txt
                         
+                        pwd
+                        cat pet.txt
                     """
                 }
             }
