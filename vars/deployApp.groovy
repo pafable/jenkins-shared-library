@@ -54,7 +54,7 @@ def call(final Closure body) {
 
                     sh """
                         printenv
-                        echo Tail wagging: ${WAGGINGTAIL}
+                        echo Tail wagging: ${env.WAGGINGTAIL}
                     """
                 }
             }
