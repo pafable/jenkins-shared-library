@@ -44,6 +44,7 @@ def call(final Closure body) {
 
             stage('this is test 2') {
                 steps {
+                    ls -ahlrt
                     println "Workspace is: ${WORKSPACE}"
                     println "Build ID: ${env.BUILD_ID}"
                     load "pet.groovy"
