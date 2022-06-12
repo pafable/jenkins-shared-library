@@ -36,10 +36,10 @@ def call(final Closure body) {
                         echo 'LEGCOUNT=4' >> pet.txt
                         echo 'WAGGINGTAIL=yes' >> pet.txt
                     """
+                }
 
-                    new File("pet.txt").eachLine { line ->
-                        println line
-                    }
+                new File("pet.txt").eachLine { line ->
+                    println line
                 }
 
                 stage('this is test 2') {
