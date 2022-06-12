@@ -45,9 +45,11 @@ def call(final Closure body) {
                         do
                             export \${n}
                         done
+                        
+                        echo \${PET}
                     """
 
-                    println "PET: \${PET}"
+                    println "PET: ${PET}"
                     println "Pet env.pet: ${env.PET}"
                 }
             }
