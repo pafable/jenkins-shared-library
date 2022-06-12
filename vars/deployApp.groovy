@@ -9,20 +9,20 @@ def call(final Closure body) {
         agent any
 
         options {
-            buildDiscarder (
-                    logRotator (
+            buildDiscarder(
+                    logRotator(
                             daysToKeepStr: '60'
                     )
             )
             disableConcurrentBuilds()
-            timeout (
+            timeout(
                     time: 1,
                     unit: 'HOURS'
             )
         }
 
         stages {
-            stage ('this is a test 1') {
+            stage('this is a test 1') {
                 steps {
                     println PipelineMessages.DN
                     println "This is x: ${x}"
@@ -40,15 +40,16 @@ def call(final Closure body) {
                     new File("pet.txt").eachLine { line ->
                         println line
                     }
-            }
+                }
 
-            stage ('this is test 2') {
-                steps {
-                    println "Workspace is: ${WORKSPACE}"
+                stage('this is test 2') {
+                    steps {
+                        println "Workspace is: ${WORKSPACE}"
 
-                    sh """
+                        sh """
                         cat pet.txt
                     """
+                    }
                 }
             }
         }
