@@ -32,14 +32,13 @@ def call(final Closure body) {
                     sh """
                         echo 'SAMPLE KEY PAIRS'
                         echo 'PET=dog' >> pet.txt
+                        export PET=dog
                         echo 'AGE=1' >> pet.txt
                         echo 'LEGCOUNT=4' >> pet.txt
                         echo 'WAGGINGTAIL=yes' >> pet.txt
                     """
-                }
 
-                new File("pet.txt").eachLine { line ->
-                    println line
+                    println "PET: ${PET}"
                 }
 
                 stage('this is test 2') {
