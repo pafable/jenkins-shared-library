@@ -37,20 +37,9 @@ def call(final Closure body) {
                         echo 'WAGGINGTAIL=yes' >> pet.txt
                     """
 
-                    /*
-                        Inject entries in pet.txt as environment variables
-                    */
-                    sh """
-                        for n in \$(cat pet.txt)
-                        do
-                            export \${n}
-                        done
-                        
-                        echo \${PET}
-                    """
-
-                    println "PET: ${PET}"
-                }
+                    new File("pet.txt").eachLine { line ->
+                        println line
+                    }
             }
 
             stage ('this is test 2') {
