@@ -25,8 +25,13 @@ def call(final Closure body) {
             stage ('this is a test 1') {
                 steps {
                     println PipelineMessages.DN
-                    println "This ${x}"
+                    println "This is x: ${x}"
                     println "This is pwd(): ${pwd()}"
+                    println "This is workspace: ${WORKSPACE}"
+
+                    sh """
+                        
+                    """
                 }
             }
         }
