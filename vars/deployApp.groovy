@@ -49,6 +49,9 @@ def call(final Closure body) {
                     println "Build ID: ${env.BUILD_ID}"
                     load "pet.groovy"
                     sh 'printenv'
+                    sh """
+                        echo Tail wagging: ${WAGGINGTAIL}
+                    """
                 }
             }
         }
