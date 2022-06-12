@@ -50,7 +50,6 @@ def call(final Closure body) {
                     """
 
                     println "PET: ${PET}"
-                    println "Pet env.pet: ${env.PET}"
                 }
             }
 
