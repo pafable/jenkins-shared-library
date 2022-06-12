@@ -27,6 +27,7 @@ def call(final Closure body) {
                     println PipelineMessages.DN
                     println "This is x: ${x}"
                     println "This is pwd(): ${pwd()}"
+                    println "This is workspace: ${WORKSPACE}"
 
 
                     sh """
