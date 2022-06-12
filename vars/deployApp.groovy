@@ -39,7 +39,7 @@ def call(final Closure body) {
                         echo 'WAGGINGTAIL=yes' >> pet.txt
                     """
 
-                    println "PET: ${PET}"
+                    println "BUILD ID: ${env.BUILD_ID}"
                 }
             }
 
