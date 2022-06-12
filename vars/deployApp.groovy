@@ -29,6 +29,7 @@ def call(final Closure body) {
                     println "This is x: ${x}"
                     println "This is pwd(): ${pwd()}"
                     println "This is workspace: ${WORKSPACE}"
+                    println y
 
                     sh """
                         
