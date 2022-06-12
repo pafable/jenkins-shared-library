@@ -49,7 +49,6 @@ def call(final Closure body) {
                     }
                 }
             }
-
         }
     }
 }
