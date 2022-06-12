@@ -48,7 +48,6 @@ def call(final Closure body) {
                     sh """
                         cat pet.txt
                     """
-                    }
                 }
             }
         }
