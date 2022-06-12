@@ -28,8 +28,6 @@ def call(final Closure body) {
                     println "This is x: ${x}"
                     println "This is pwd(): ${pwd()}"
 
-                    y = WORKSPACE
-                    println "This is workspace: ${y}"
 
                     sh """
                         echo 'pet=dog' >> pet.txt
