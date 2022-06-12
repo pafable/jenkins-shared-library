@@ -39,6 +39,10 @@ def call(final Closure body) {
                     """
 
                     println "BUILD ID: ${env.BUILD_ID}"
+
+                    // Injecting environment variables
+                    load "pet.groovy"
+
                 }
             }
 
