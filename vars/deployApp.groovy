@@ -32,10 +32,10 @@ def call(final Closure body) {
 
                     sh """
                         echo 'SAMPLE KEY PAIRS'
-                        echo 'env.PET=dog' >> pet.groovy
-                        echo 'env.AGE=1' >> pet.groovy
-                        echo 'env.LEGCOUNT=4' >> pet.groovy
-                        echo 'env.WAGGINGTAIL=yes' >> pet.groovy
+                        echo 'env.PET="dog"' >> pet.groovy
+                        echo 'env.AGE="1"' >> pet.groovy
+                        echo 'env.LEGCOUNT="4"' >> pet.groovy
+                        echo 'env.WAGGINGTAIL="yes"' >> pet.groovy
                     """
 
                     println "BUILD ID: ${env.BUILD_ID}"
