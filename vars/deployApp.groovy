@@ -4,8 +4,9 @@ def call(final Closure body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
 
     final String x = System.getProperty("user.dir")
-    println xx
+
     chuckNorris()
+
     pipeline {
         agent any
 
@@ -25,6 +26,7 @@ def call(final Closure body) {
         stages {
             stage('this is a test 1') {
                 steps {
+                    println xx
                     sh 'printenv'
                     println PipelineMessages.DN
                     println "This is x: ${x}"
