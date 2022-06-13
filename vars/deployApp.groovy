@@ -42,7 +42,7 @@ def call(final Closure body) {
 
                     // Injecting environment variables
                     load "pet.groovy"
-
+                    chucknorris()
                 }
             }
 
