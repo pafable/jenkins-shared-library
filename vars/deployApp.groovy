@@ -1,3 +1,4 @@
+import com.phil.jenkins.lib.DeploymentSettings
 import com.phil.jenkins.lib.PipelineMessages
 
 def call(final Closure body) {
@@ -55,6 +56,15 @@ def call(final Closure body) {
                         printenv
                         echo Tail wagging: ${WAGGINGTAIL}
                     """
+
+                    println DeploymentSettings.DEV.name
+                    println DeploymentSettings.DEV.numberOfInstances
+
+                    println DeploymentSettings.QA.name
+                    println DeploymentSettings.QA.numberOfInstances
+
+                    println DeploymentSettings.PROD.name
+                    println DeploymentSettings.PROD.isPriority
                 }
             }
         }
