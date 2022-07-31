@@ -5,7 +5,7 @@ def call(final Closure body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
 
     final String x = System.getProperty("user.dir")
-
+    env.setProperty('fizz', 'buzz')
     pipeline {
         agent any
 
@@ -30,7 +30,7 @@ def call(final Closure body) {
                     println "This is x: ${x}"
                     println "This is pwd(): ${pwd()}"
                     println "This is workspace: ${WORKSPACE}"
-                    println "this is foo: \${foo}"
+                    println "this is foo: ${fizz}"
 
                     sh """
                         echo 'SAMPLE KEY PAIRS'
