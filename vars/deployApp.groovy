@@ -30,7 +30,7 @@ def call(final Closure body) {
                     println "This is x: ${x}"
                     println "This is pwd(): ${pwd()}"
                     println "This is workspace: ${WORKSPACE}"
-                    println "this is foo: ${foo}"
+                    println "this is foo: \${foo}"
 
                     sh """
                         echo 'SAMPLE KEY PAIRS'
